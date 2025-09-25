@@ -1,0 +1,12 @@
+[project]
+name = "template"
+version = "0.1.0"
+description = "Template for FastAPI applications."
+readme = "README.md"
+license = { file = "LICENSE.md" }
+authors = [{ name = "Tho Nguyen", email = "contact@naiwaaa.simplelogin.com" }]
+requires-python = ">=3.13,<3.14"
+dependencies = []
+
+[tool.uv.workspace]
+members = ["template-*"]
