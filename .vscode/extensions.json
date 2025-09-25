@@ -1,0 +1,17 @@
+{
+  "recommendations": [
+    "njpwerner.autodocstring",
+    "ms-azuretools.vscode-docker",
+    "docker.docker",
+    "mikestead.dotenv",
+    "EditorConfig.EditorConfig",
+    "tamasfe.even-better-toml",
+    "bierner.markdown-mermaid",
+    "ms-python.mypy-type-checker",
+    "esbenp.prettier-vscode",
+    "ms-python.python",
+    "charliermarsh.ruff",
+    "mkhl.shfmt",
+    "nefrob.vscode-just-syntax"
+  ]
+}
