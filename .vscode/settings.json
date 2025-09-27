@@ -37,6 +37,7 @@
   "python.analysis.typeEvaluation.strictSetInference": true,
   "python.terminal.activateEnvInCurrentTerminal": true,
   "python.testing.pytestEnabled": true,
+  "ruff.importStrategy": "fromEnvironment",
   "vscode-just.formatOnSave": true,
   "vscode-just.runInTerminal": true
 }
