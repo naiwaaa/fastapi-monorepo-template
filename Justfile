@@ -1,6 +1,7 @@
-set dotenv-load
+set dotenv-load := true
 
-export COVERAGE_CORE := "sysmon"
+# export COVERAGE_CORE := "sysmon"
+
 export PYTHONDONTWRITEBYTECODE := "1"
 
 # Show this help message and exit
@@ -17,7 +18,7 @@ install:
     uv sync --all-packages
     prek install --install-hooks
 
-# Update all dependencies
+# Upgrade all dependencies
 [group('Manage dependencies')]
 upgrade:
     uv lock --upgrade
@@ -73,21 +74,21 @@ test-benchmark:
 
 # Start docker services
 [group('Manage docker services')]
-[working-directory: 'docker']
+[working-directory('docker')]
 up *SERVICES:
-    docker compose --file compose.dev.yaml --env-file env.dev up --remove-orphans {{SERVICES}}
+    docker compose --file compose.dev.yaml --env-file env.dev up --remove-orphans {{ SERVICES }}
 
 # Stop all docker services
 [group('Manage docker services')]
-[working-directory: 'docker']
+[working-directory('docker')]
 down:
     docker compose --file compose.dev.yaml --env-file env.dev down --remove-orphans
 
 # Wrapper to interact with docker compose
 [group('Manage docker services')]
-[working-directory: 'docker']
+[working-directory('docker')]
 docker *FLAGS:
-    docker compose --file compose.dev.yaml --env-file env.dev {{FLAGS}}
+    docker compose --file compose.dev.yaml --env-file env.dev {{ FLAGS }}
 
 # -----------
 # Deployments

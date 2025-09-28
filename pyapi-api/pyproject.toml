@@ -1,0 +1,16 @@
+[project]
+name = "pyapi-api"
+version = "0.1.0"
+readme = "README.md"
+authors = [{ name = "Tho Nguyen", email = "contact@naiwaaa.simplelogin.com" }]
+requires-python = ">=3.13"
+dependencies = [
+  "fastapi[standard]>=0.117.1",
+  "orjson>=3.11.3",
+  "pydantic>=2.11.9",
+  "pydantic-settings>=2.11.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.8.19,<0.9.0"]
+build-backend = "uv_build"
